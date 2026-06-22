@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maria Luiza de Souza - Desenvolvedora Backend | Node.js, Express, MongoDB">
+    <title>MLDev | Backend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-gradient { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3); }
+        .skill-tag { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: inline-block; padding: 8px 16px; border-radius: 20px; color: white; margin: 4px; font-size: 0.85rem; font-weight: 500; }
+        .skill-tag:hover { transform: scale(1.05); }
+        .section-title { position: relative; display: inline-block; padding-bottom: 12px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 4px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 2px; }
+        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); }
+        .btn-outline { border: 2px solid #667eea; transition: all 0.3s ease; }
+        .btn-outline:hover { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; transform: translateY(-2px); }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .timeline-item { position: relative; padding-left: 24px; }
+        .timeline-item::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .timeline-item::after { content: ''; position: absolute; left: -5px; top: 0; width: 13px; height: 13px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-inter">
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <h1 class="text-2xl font-bold gradient-text">MLDev</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-purple-400 transition font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-purple-400 transition font-medium">Sobre</a>
+                    <a href="#skills" class="text-gray-300 hover:text-purple-400 transition font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-purple-400 transition font-medium">Projetos</a>
+                    <a href="#contact" class="text-gray-300 hover:text-purple-400 transition font-medium">Contato</a>
+                </div>
+                <button id="menu-btn" class="md:hidden text-gray-300 hover:text-purple-400 transition">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-300 hover:text-purple-400 transition py-2">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-purple-400 transition py-2">Sobre</a>
+                <a href="#skills" class="block text-gray-300 hover:text-purple-400 transition py-2">Skills</a>
+                <a href="#projects" class="block text-gray-300 hover:text-purple-400 transition py-2">Projetos</a>
+                <a href="#contact" class="block text-gray-300 hover:text-purple-400 transition py-2">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                        <span class="text-green-400 font-medium">Disponível para oportunidades</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        <span class="text-white">Olá, eu sou</span><br>
+                        <span class="gradient-text">Maria Luiza de Souza</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-300 mb-6">Backend Developer</h2>
+                    <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                        Especialista em criar APIs robustas e escaláveis com <span class="text-purple-400 font-semibold">Node.js</span>,
+                        <span class="text-purple-400 font-semibold">Express</span> e <span class="text-purple-400 font-semibold">MongoDB</span>.
+                        Transformando ideias em soluções digitais eficientes.
+                    </p>
+                    <div class="flex gap-4 flex-wrap">
+                        <a href="#projects" class="btn-primary px-8 py-4 rounded-xl font-semibold text-white inline-flex items-center">
+                            <i class="fas fa-rocket mr-2"></i> Ver Projetos
+                        </a>
+                        <a href="#contact" class="btn-outline px-8 py-4 rounded-xl font-semibold text-purple-400 inline-flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Contato
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">3+</div>
+                            <div class="text-gray-400 text-sm">Linguagens</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">5+</div>
+                            <div class="text-gray-400 text-sm">Projetos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">100%</div>
+                            <div class="text-gray-400 text-sm">Dedicação</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex justify-center animate-float">
+                    <div class="relative">
+                        <div class="w-72 h-72 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-purple-500/30">
+                            <i class="fas fa-code text-8xl text-purple-400/80"></i>
+                        </div>
+                        <div class="absolute -top-4 -right-4 bg-gray-800 px-4 py-2 rounded-xl border border-purple-500/30">
+                            <span class="text-purple-400 font-mono text-sm">&lt;code/&gt;</span>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 bg-gray-800 px-4 py-2 rounded-xl border border-green-500/30">
+                            <span class="text-green-400 font-mono text-sm">npm start</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-gray-400 hover:text-purple-400 transition">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-4xl font-bold mb-12 gradient-text">Sobre Mim</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Sou uma desenvolvedora backend apaixonada por criar soluções robustas e escaláveis.
+                        Com formação em <strong class="text-white">Superior em Desenvolvimento Back End</strong> e
+                        <strong class="text-white"> Técnica de Informática</strong>, combino conhecimento técnico com
+                        pensamento estratégico para resolver problemas complexos.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Minha especialidade é desenvolver <strong class="text-white">APIs REST</strong>,
+                        <strong class="text-white">autenticação segura</strong> e <strong class="text-white">integração de sistemas</strong>.
+                        Acredito em código limpo, documentação clara e soluções que fazem diferença.
+                    </p>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-white mb-4"><i class="fas fa-graduation-cap text-purple-400 mr-2"></i> Formação</h3>
+                        <div class="space-y-4">
+                            <div class="timeline-item">
+                                <h4 class="text-white font-semibold">Superior em Desenvolvimento Back End</h4>
+                                <p class="text-gray-400 text-sm">Concluído</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="text-white font-semibold">Técnica de Informática</h4>
+                                <p class="text-gray-400 text-sm">Concluído</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Por que me escolher?</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-rocket text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Foco em Performance</h4>
+                                <p class="text-gray-400 text-sm">APIs otimizadas e escaláveis para alto tráfego</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Segurança Primária</h4>
+                                <p class="text-gray-400 text-sm">Autenticação JWT e boas práticas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-code text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Código Limpo</h4>
+                                <p class="text-gray-400 text-sm">Arquitetura organizada e fácil de manter</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-book text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Documentação</h4>
+                                <p class="text-gray-400 text-sm">Projetos bem documentados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-4xl font-bold mb-12 gradient-text">Competências Técnicas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-server text-2xl text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JWT</span>
+                    </div>
+                </div>
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-database text-2xl text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Mongoose</span>
+                    </div>
+                </div>
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-2xl text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Ferramentas</h3>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">N8N</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Postman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-xl font-bold text-white mb-6"><i class="fas fa-lightbulb text-yellow-400 mr-2"></i> Diferenciais</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Arquitetura MVC e boas praticas</span></div>
+                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Autenticacao e autorizacao JWT</span></div>
+                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">CRUD completo e validacoes</span></div>
+                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Deploy e configuracao de ambientes</span></div>
+                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Tratamento de erros robusto</span></div>
+                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Documentacao de projetos</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-4xl font-bold mb-12 gradient-text">Projetos em Destaque</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tasks text-xl text-purple-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">TODO API</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        API REST completa para gerenciamento de tarefas com autenticacao JWT,
+                        CRUD completo e persistencia em MongoDB. Projeto com arquitetura modular e documentacao detalhada.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Node.js + Express</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>MongoDB + Mongoose</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Autenticacao JWT segura</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Arquitetura MVC organizada</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://github.com/maria-luiza-souza/todo-api" target="_blank" class="px-6 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                        <a href="https://todo-api-rosy-sigma.vercel.app" target="_blank" class="px-6 py-3 border border-purple-600 text-purple-400 rounded-xl hover:bg-purple-600 hover:text-white transition font-medium inline-flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Deploy
+                        </a>
+                    </div>
+                </div>
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700 flex flex-col items-center justify-center text-center min-h-[300px]">
+                    <div class="w-16 h-16 bg-gray-700/50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-plus text-3xl text-gray-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-400 mb-2">Proximo Projeto</h3>
+                    <p class="text-gray-500">Em desenvolvimento...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center">Vamos Conversar!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="mailto:malusouza396@gmail.com" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
+                    <i class="fas fa-envelope text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Email</h3>
+                    <p class="text-purple-100">malusouza396@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/malu-souza-a27564224/" target="_blank" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
+                    <i class="fab fa-linkedin text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">LinkedIn</h3>
+                    <p class="text-purple-100">malu-souza</p>
+                </a>
+                <a href="https://github.com/maria-luiza-souza" target="_blank" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
+                    <i class="fab fa-github text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">GitHub</h3>
+                    <p class="text-purple-100">maria-luiza-souza</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Maria Luiza de Souza. Todos os direitos reservados.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="https://github.com/maria-luiza-souza" target="_blank" class="hover:text-white transition">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/malu-souza-a27564224/" target="_blank" class="hover:text-white transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="mailto:malusouza396@gmail.com" class="hover:text-white transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
