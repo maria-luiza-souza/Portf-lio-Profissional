@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maria Luiza de Souza - Desenvolvedora Backend | Node.js, Express, MongoDB">
-    <title>MLDev | Backend Developer</title>
+    <meta name="description" content="Portfólio de Maria Luiza de Souza, Desenvolvedora Backend com projetos em Node.js, TypeScript, NestJS, PostgreSQL, MongoDB, Prisma, Docker e arquitetura SaaS.">
+    <meta name="theme-color" content="#111827">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maria Luiza de Souza | Desenvolvedora Backend">
+    <meta property="og:description" content="APIs, autenticação, bancos de dados e aplicações SaaS com Node.js, TypeScript, NestJS, PostgreSQL e Docker.">
+    <title>Maria Luiza de Souza | Desenvolvedora Backend</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,21 +40,26 @@
         .timeline-item { position: relative; padding-left: 24px; }
         .timeline-item::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .timeline-item::after { content: ''; position: absolute; left: -5px; top: 0; width: 13px; height: 13px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; }
+        :focus-visible { outline: 3px solid #a78bfa; outline-offset: 4px; border-radius: 8px; }
+        .tech-chip { display:inline-flex; align-items:center; padding:6px 10px; border-radius:999px; background:rgba(102,126,234,.10); border:1px solid rgba(139,92,246,.25); color:#c4b5fd; font-size:.75rem; font-weight:600; }
+        .project-status { display:inline-flex; align-items:center; padding:5px 10px; border-radius:999px; font-size:.72rem; font-weight:700; }
+        .project-status.dev { background:rgba(234,179,8,.12); color:#fde68a; border:1px solid rgba(234,179,8,.25); }
+        .project-status.live { background:rgba(34,197,94,.12); color:#86efac; border:1px solid rgba(34,197,94,.25); }
     </style>
 </head>
 <body class="bg-gray-900 text-white font-inter">
-    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
+    <nav aria-label="Navegação principal" class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <h1 class="text-2xl font-bold gradient-text">MLDev</h1>
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="text-gray-300 hover:text-purple-400 transition font-medium">Home</a>
                     <a href="#about" class="text-gray-300 hover:text-purple-400 transition font-medium">Sobre</a>
-                    <a href="#skills" class="text-gray-300 hover:text-purple-400 transition font-medium">Skills</a>
+                    <a href="#skills" class="text-gray-300 hover:text-purple-400 transition font-medium">Tecnologias</a>
                     <a href="#projects" class="text-gray-300 hover:text-purple-400 transition font-medium">Projetos</a>
                     <a href="#contact" class="text-gray-300 hover:text-purple-400 transition font-medium">Contato</a>
                 </div>
-                <button id="menu-btn" class="md:hidden text-gray-300 hover:text-purple-400 transition">
+                <button id="menu-btn" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-gray-300 hover:text-purple-400 transition">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -59,7 +68,7 @@
             <div class="px-4 py-4 space-y-3">
                 <a href="#home" class="block text-gray-300 hover:text-purple-400 transition py-2">Home</a>
                 <a href="#about" class="block text-gray-300 hover:text-purple-400 transition py-2">Sobre</a>
-                <a href="#skills" class="block text-gray-300 hover:text-purple-400 transition py-2">Skills</a>
+                <a href="#skills" class="block text-gray-300 hover:text-purple-400 transition py-2">Tecnologias</a>
                 <a href="#projects" class="block text-gray-300 hover:text-purple-400 transition py-2">Projetos</a>
                 <a href="#contact" class="block text-gray-300 hover:text-purple-400 transition py-2">Contato</a>
             </div>
@@ -82,32 +91,36 @@
                         <span class="text-white">Olá, eu sou</span><br>
                         <span class="gradient-text">Maria Luiza de Souza</span>
                     </h1>
-                    <h2 class="text-2xl md:text-3xl text-gray-300 mb-6">Backend Developer</h2>
+                    <h2 class="text-2xl md:text-3xl text-gray-300 mb-6">Desenvolvedora Backend</h2>
                     <p class="text-lg text-gray-400 mb-8 leading-relaxed">
-                        Especialista em criar APIs robustas e escaláveis com <span class="text-purple-400 font-semibold">Node.js</span>,
-                        <span class="text-purple-400 font-semibold">Express</span> e <span class="text-purple-400 font-semibold">MongoDB</span>.
-                        Transformando ideias em soluções digitais eficientes.
+                        Desenvolvo APIs e aplicações web com <span class="text-purple-400 font-semibold">Node.js</span>,
+                        <span class="text-purple-400 font-semibold">TypeScript</span>, <span class="text-purple-400 font-semibold">NestJS</span>,
+                        <span class="text-purple-400 font-semibold">PostgreSQL</span> e <span class="text-purple-400 font-semibold">Docker</span>,
+                        com foco em autenticação, bancos de dados e arquitetura de sistemas.
                     </p>
                     <div class="flex gap-4 flex-wrap">
                         <a href="#projects" class="btn-primary px-8 py-4 rounded-xl font-semibold text-white inline-flex items-center">
                             <i class="fas fa-rocket mr-2"></i> Ver Projetos
                         </a>
-                        <a href="#contact" class="btn-outline px-8 py-4 rounded-xl font-semibold text-purple-400 inline-flex items-center">
+                        <a href="https://github.com/maria-luiza-souza" target="_blank" rel="noopener noreferrer" class="btn-outline px-8 py-4 rounded-xl font-semibold text-purple-400 inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                        <a href="#contact" class="px-8 py-4 rounded-xl font-semibold text-gray-300 hover:text-white transition inline-flex items-center">
                             <i class="fas fa-paper-plane mr-2"></i> Contato
                         </a>
                     </div>
-                    <div class="grid grid-cols-3 gap-6 mt-12">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold gradient-text">3+</div>
-                            <div class="text-gray-400 text-sm">Linguagens</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-10">
+                        <div class="bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                            <strong class="block text-white text-sm">APIs REST</strong>
+                            <span class="text-gray-400 text-xs">Autenticação e integrações</span>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold gradient-text">5+</div>
-                            <div class="text-gray-400 text-sm">Projetos</div>
+                        <div class="bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                            <strong class="block text-white text-sm">SaaS Multiempresa</strong>
+                            <span class="text-gray-400 text-xs">Arquitetura multi-tenant</span>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold gradient-text">100%</div>
-                            <div class="text-gray-400 text-sm">Dedicação</div>
+                        <div class="bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                            <strong class="block text-white text-sm">Dados</strong>
+                            <span class="text-gray-400 text-xs">PostgreSQL + MongoDB</span>
                         </div>
                     </div>
                 </div>
@@ -139,15 +152,14 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div class="space-y-6">
                     <p class="text-gray-300 text-lg leading-relaxed">
-                        Sou uma desenvolvedora backend apaixonada por criar soluções robustas e escaláveis.
-                        Com formação em <strong class="text-white">Superior em Desenvolvimento Back End</strong> e
-                        <strong class="text-white"> Técnica de Informática</strong>, combino conhecimento técnico com
-                        pensamento estratégico para resolver problemas complexos.
+                        Sou desenvolvedora backend com formação em <strong class="text-white">Desenvolvimento Back End</strong> e
+                        <strong class="text-white">Técnica de Informática</strong>. Tenho direcionado meus projetos para APIs,
+                        autenticação, bancos relacionais e aplicações web com arquitetura organizada.
                     </p>
                     <p class="text-gray-300 text-lg leading-relaxed">
-                        Minha especialidade é desenvolver <strong class="text-white">APIs REST</strong>,
-                        <strong class="text-white">autenticação segura</strong> e <strong class="text-white">integração de sistemas</strong>.
-                        Acredito em código limpo, documentação clara e soluções que fazem diferença.
+                        Trabalho principalmente com <strong class="text-white">Node.js, TypeScript, NestJS, PostgreSQL e MongoDB</strong>,
+                        buscando escrever código legível, validar dados corretamente, documentar decisões e construir projetos que
+                        possam evoluir de forma sustentável.
                     </p>
                     <div class="mt-8">
                         <h3 class="text-xl font-bold text-white mb-4"><i class="fas fa-graduation-cap text-purple-400 mr-2"></i> Formação</h3>
@@ -164,15 +176,15 @@
                     </div>
                 </div>
                 <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
-                    <h3 class="text-2xl font-bold mb-6 text-white">Por que me escolher?</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-white">Como eu trabalho</h3>
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-rocket text-purple-400"></i>
+                                <i class="fas fa-sitemap text-purple-400"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold mb-1">Foco em Performance</h4>
-                                <p class="text-gray-400 text-sm">APIs otimizadas e escaláveis para alto tráfego</p>
+                                <h4 class="text-white font-semibold mb-1">Arquitetura organizada</h4>
+                                <p class="text-gray-400 text-sm">Separação de responsabilidades, módulos claros e código fácil de evoluir.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -180,26 +192,26 @@
                                 <i class="fas fa-shield-alt text-green-400"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold mb-1">Segurança Primária</h4>
-                                <p class="text-gray-400 text-sm">Autenticação JWT e boas práticas</p>
+                                <h4 class="text-white font-semibold mb-1">Segurança e autenticação</h4>
+                                <p class="text-gray-400 text-sm">JWT, refresh token, cookies HttpOnly, hash de senhas e rotas protegidas.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-code text-blue-400"></i>
+                                <i class="fas fa-database text-blue-400"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold mb-1">Código Limpo</h4>
-                                <p class="text-gray-400 text-sm">Arquitetura organizada e fácil de manter</p>
+                                <h4 class="text-white font-semibold mb-1">APIs e dados</h4>
+                                <p class="text-gray-400 text-sm">Validação, persistência, consultas e modelagem com bancos relacionais e NoSQL.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-book text-yellow-400"></i>
+                                <i class="fas fa-code-branch text-yellow-400"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold mb-1">Documentação</h4>
-                                <p class="text-gray-400 text-sm">Projetos bem documentados</p>
+                                <h4 class="text-white font-semibold mb-1">Evolução contínua</h4>
+                                <p class="text-gray-400 text-sm">Versionamento com Git, documentação e melhorias incrementais nos projetos.</p>
                             </div>
                         </div>
                     </div>
@@ -210,63 +222,75 @@
 
     <section id="skills" class="py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="section-title text-4xl font-bold mb-12 gradient-text">Competências Técnicas</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
-                    <div class="flex items-center mb-6">
-                        <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4">
-                            <i class="fas fa-server text-2xl text-purple-400"></i>
+            <h2 class="section-title text-4xl font-bold mb-4 gradient-text">Tecnologias</h2>
+            <p class="text-gray-400 max-w-3xl mb-12">Ferramentas e tecnologias que utilizo nos projetos atuais, do backend à entrega da aplicação.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                <div class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-5">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mr-3">
+                            <i class="fas fa-server text-xl text-purple-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Backend</h3>
+                        <h3 class="text-lg font-bold text-white">Backend</h3>
                     </div>
-                    <div class="flex flex-wrap">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">REST API</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JWT</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-chip">Node.js</span>
+                        <span class="tech-chip">TypeScript</span>
+                        <span class="tech-chip">NestJS</span>
+                        <span class="tech-chip">Express</span>
+                        <span class="tech-chip">REST API</span>
+                        <span class="tech-chip">JWT</span>
                     </div>
                 </div>
-                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
-                    <div class="flex items-center mb-6">
-                        <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mr-4">
-                            <i class="fas fa-database text-2xl text-green-400"></i>
+
+                <div class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-5">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mr-3">
+                            <i class="fas fa-laptop-code text-xl text-blue-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Databases</h3>
+                        <h3 class="text-lg font-bold text-white">Frontend</h3>
                     </div>
-                    <div class="flex flex-wrap">
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Mongoose</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-chip">Next.js</span>
+                        <span class="tech-chip">React</span>
+                        <span class="tech-chip">TypeScript</span>
+                        <span class="tech-chip">HTML</span>
+                        <span class="tech-chip">CSS</span>
+                        <span class="tech-chip">JavaScript</span>
                     </div>
                 </div>
-                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
-                    <div class="flex items-center mb-6">
-                        <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4">
-                            <i class="fas fa-tools text-2xl text-blue-400"></i>
+
+                <div class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-5">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mr-3">
+                            <i class="fas fa-database text-xl text-green-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Ferramentas</h3>
+                        <h3 class="text-lg font-bold text-white">Dados</h3>
                     </div>
-                    <div class="flex flex-wrap">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">N8N</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">IA</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-chip">PostgreSQL</span>
+                        <span class="tech-chip">MongoDB</span>
+                        <span class="tech-chip">Prisma</span>
+                        <span class="tech-chip">Mongoose</span>
+                        <span class="tech-chip">MySQL</span>
                     </div>
                 </div>
-            </div>
-            <div class="mt-12 bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
-                <h3 class="text-xl font-bold text-white mb-6"><i class="fas fa-lightbulb text-yellow-400 mr-2"></i> Diferenciais</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Arquitetura MVC e boas praticas</span></div>
-                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Autenticacao e autorizacao JWT</span></div>
-                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">CRUD completo e validacoes</span></div>
-                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Deploy e configuracao de ambientes</span></div>
-                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Tratamento de erros robusto</span></div>
-                    <div class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-3"></i><span class="text-gray-300">Documentacao de projetos</span></div>
+
+                <div class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-5">
+                        <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mr-3">
+                            <i class="fas fa-toolbox text-xl text-pink-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Ferramentas</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-chip">Git</span>
+                        <span class="tech-chip">GitHub</span>
+                        <span class="tech-chip">Docker</span>
+                        <span class="tech-chip">Postman</span>
+                        <span class="tech-chip">VS Code</span>
+                        <span class="tech-chip">N8N</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -274,102 +298,144 @@
 
     <section id="projects" class="py-20 bg-gray-800/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="section-title text-4xl font-bold mb-12 gradient-text">Projetos em Destaque</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4">
-                            <i class="fas fa-tasks text-xl text-purple-400"></i>
+            <h2 class="section-title text-4xl font-bold mb-4 gradient-text">Projetos em Destaque</h2>
+            <p class="text-gray-400 max-w-3xl mb-12">Projetos que demonstram backend, autenticação, bancos de dados, arquitetura SaaS e construção de interfaces responsivas.</p>
+
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                <article class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-gray-700 flex flex-col">
+                    <div class="flex items-start justify-between gap-3 mb-5">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-tasks text-xl text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">TaskFlow / TODO API</h3>
+                                <span class="project-status live mt-2">Projeto publicado</span>
+                            </div>
                         </div>
-                        <h3 class="text-2xl font-bold text-white">TODO API</h3>
                     </div>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        API REST completa para gerenciamento de tarefas com autenticação JWT,
-                        CRUD completo, filtros avançados, estatísticas e persistência em MongoDB.
-                        Inclui frontend TaskFlow com modo escuro, categorias, datas de vencimento,
-                        busca, exportação de dados, design responsivo e PWA instalável.
+
+                    <p class="text-gray-400 mb-5 leading-relaxed">
+                        Aplicação de gerenciamento de tarefas com API REST, autenticação JWT, persistência em MongoDB e frontend responsivo.
                     </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Node.js + Express</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>MongoDB + Mongoose</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Autenticação JWT segura</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>CORS configurado</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Filtros e ordenação avançados</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Estatísticas e dashboard</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Frontend TaskFlow (HTML/CSS/JS)</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>PWA instalável no celular</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Modo escuro e design responsivo</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Deploy na Vercel (monorepo)</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://github.com/maria-luiza-souza/todo-api" target="_blank" class="px-6 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition font-medium inline-flex items-center">
+
+                    <div class="mb-5">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Desafios técnicos</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li>• Autenticação e proteção de rotas</li>
+                            <li>• CRUD, filtros e ordenação</li>
+                            <li>• Persistência com MongoDB + Mongoose</li>
+                            <li>• PWA, responsividade e modo escuro</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tech-chip">Node.js</span><span class="tech-chip">Express</span><span class="tech-chip">MongoDB</span><span class="tech-chip">JWT</span>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <a href="https://github.com/maria-luiza-souza/todo-api" target="_blank" rel="noopener noreferrer" class="px-5 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition font-medium inline-flex items-center">
                             <i class="fab fa-github mr-2"></i> GitHub
                         </a>
-                        <a href="https://todo-frontend-iota-six.vercel.app?v=2" target="_blank" class="px-6 py-3 border border-purple-600 text-purple-400 rounded-xl hover:bg-purple-600 hover:text-white transition font-medium inline-flex items-center">
-                            <i class="fas fa-external-link-alt mr-2"></i> Ver Online
+                        <a href="https://todo-frontend-iota-six.vercel.app?v=2" target="_blank" rel="noopener noreferrer" class="px-5 py-3 border border-purple-600 text-purple-400 rounded-xl hover:bg-purple-600 hover:text-white transition font-medium inline-flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Ver online
                         </a>
                     </div>
-                </div>
-                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
-                    <div class="flex items-center justify-between gap-4 mb-4">
+                </article>
+
+                <article class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-gray-700 flex flex-col">
+                    <div class="flex items-start justify-between gap-3 mb-5">
                         <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mr-3">
                                 <i class="fas fa-building text-xl text-blue-400"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-white">ERP SaaS Multiempresa</h3>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">ERP SaaS Multiempresa</h3>
+                                <span class="project-status dev mt-2">Em desenvolvimento</span>
+                            </div>
                         </div>
-                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-yellow-500/15 text-yellow-300 border border-yellow-500/30 whitespace-nowrap">
-                            Em desenvolvimento
-                        </span>
                     </div>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Plataforma de gestão empresarial desenvolvida com arquitetura SaaS multiempresa,
-                        preparada para atender diferentes estabelecimentos com isolamento de dados por empresa.
-                        O projeto conta com autenticação segura, gerenciamento de sessões, dashboard protegido
-                        e estrutura modular para expansão comercial.
+
+                    <p class="text-gray-400 mb-5 leading-relaxed">
+                        ERP multi-tenant com frontend em Next.js, API NestJS e PostgreSQL, estruturado para evoluir em módulos empresariais.
                     </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Next.js + TypeScript no frontend</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>NestJS + REST API no backend</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>PostgreSQL + Prisma ORM</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Docker para ambiente e banco de dados</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Arquitetura multi-tenant por empresa</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>JWT, refresh token e cookie HttpOnly</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-green-400 mr-3"></i>Sessão persistente e dashboard protegido</li>
-                        <li class="flex items-center text-gray-300"><i class="fas fa-spinner text-yellow-400 mr-3"></i>Módulo de clientes em desenvolvimento</li>
-                    </ul>
+
+                    <div class="mb-5">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Decisões de engenharia</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li>• Isolamento de dados por <code class="text-purple-300">companyId</code></li>
+                            <li>• JWT + refresh token com rotação</li>
+                            <li>• Refresh token armazenado como hash</li>
+                            <li>• Cookie HttpOnly, Prisma e Docker</li>
+                        </ul>
+                    </div>
+
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 text-xs border border-purple-500/30">Next.js</span>
-                        <span class="px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 text-xs border border-purple-500/30">NestJS</span>
-                        <span class="px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 text-xs border border-purple-500/30">TypeScript</span>
-                        <span class="px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 text-xs border border-purple-500/30">PostgreSQL</span>
-                        <span class="px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 text-xs border border-purple-500/30">Prisma</span>
-                        <span class="px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 text-xs border border-purple-500/30">Docker</span>
+                        <span class="tech-chip">Next.js</span><span class="tech-chip">NestJS</span><span class="tech-chip">TypeScript</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">Prisma</span><span class="tech-chip">Docker</span>
                     </div>
-                    <div class="flex items-center text-sm text-gray-500">
-                        <i class="fas fa-code-branch mr-2"></i>
-                        Projeto em evolução contínua para futura comercialização como SaaS
+
+                    <div class="mt-auto text-sm text-gray-500 flex items-center">
+                        <i class="fas fa-lock mr-2"></i> Repositório privado durante o desenvolvimento
                     </div>
-                </div>
+                </article>
+
+                <article class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-gray-700 flex flex-col">
+                    <div class="flex items-start justify-between gap-3 mb-5">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mr-3">
+                                <i class="fas fa-columns text-xl text-pink-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">ULALÁ</h3>
+                                <span class="project-status live mt-2">Projeto ativo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-400 mb-5 leading-relaxed">
+                        Aplicação web de organização de tarefas e anotações com dashboard, Kanban, filtros e experiência otimizada para celular.
+                    </p>
+
+                    <div class="mb-5">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Destaques</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li>• Kanban com drag and drop</li>
+                            <li>• Dashboard e indicadores visuais</li>
+                            <li>• Filtros por status e período</li>
+                            <li>• Layout responsivo e foco em usabilidade</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tech-chip">HTML</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">Chart.js</span>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <a href="https://github.com/maria-luiza-souza/aplicativo_tarefas_lala" target="_blank" rel="noopener noreferrer" class="px-5 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-white border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold mb-12 text-center">Vamos Conversar!</h2>
+            <h2 class="text-4xl font-bold mb-4 text-center">Contato</h2>
+            <p class="text-purple-100/80 text-center max-w-2xl mx-auto mb-12">Aberta a oportunidades, projetos e conversas sobre desenvolvimento backend e aplicações web.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <a href="mailto:malusouza396@gmail.com" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
                     <i class="fas fa-envelope text-5xl mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">Email</h3>
                     <p class="text-purple-100">malusouza396@gmail.com</p>
                 </a>
-                <a href="https://www.linkedin.com/in/malu-souza-a27564224/" target="_blank" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
+                <a href="https://www.linkedin.com/in/malu-souza-a27564224/" target="_blank" rel="noopener noreferrer" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
                     <i class="fab fa-linkedin text-5xl mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">LinkedIn</h3>
                     <p class="text-purple-100">malu-souza</p>
                 </a>
-                <a href="https://github.com/maria-luiza-souza" target="_blank" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
+                <a href="https://github.com/maria-luiza-souza" target="_blank" rel="noopener noreferrer" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
                     <i class="fab fa-github text-5xl mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">GitHub</h3>
                     <p class="text-purple-100">maria-luiza-souza</p>
@@ -381,12 +447,12 @@
     <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; 2025 Maria Luiza de Souza. Todos os direitos reservados.</p>
+                <p>&copy; <span id="current-year"></span> Maria Luiza de Souza. Todos os direitos reservados.</p>
                 <div class="flex gap-6 mt-4 md:mt-0">
-                    <a href="https://github.com/maria-luiza-souza" target="_blank" class="hover:text-white transition">
+                    <a href="https://github.com/maria-luiza-souza" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/malu-souza-a27564224/" target="_blank" class="hover:text-white transition">
+                    <a href="https://www.linkedin.com/in/malu-souza-a27564224/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
                     <a href="mailto:malusouza396@gmail.com" class="hover:text-white transition">
@@ -403,8 +469,14 @@
         if (menuBtn) {
             menuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                menuBtn.setAttribute('aria-expanded', String(isOpen));
+                menuBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
             });
         }
+
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) yearElement.textContent = new Date().getFullYear();
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -412,6 +484,10 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                     mobileMenu.classList.add('hidden');
+                    if (menuBtn) {
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                        menuBtn.setAttribute('aria-label', 'Abrir menu');
+                    }
                 }
             });
         });
