@@ -46,17 +46,38 @@
         .project-status.dev { background:rgba(234,179,8,.12); color:#fde68a; border:1px solid rgba(234,179,8,.25); }
         .project-status.live { background:rgba(34,197,94,.12); color:#86efac; border:1px solid rgba(34,197,94,.25); }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Maria Luiza de Souza",
+      "jobTitle": "Desenvolvedora Web e Backend",
+      "sameAs": [
+        "https://github.com/maria-luiza-souza",
+        "https://www.linkedin.com/in/malu-souza-a27564224/"
+      ],
+      "knowsAbout": [
+        "Node.js", "TypeScript", "NestJS", "Next.js", "React",
+        "PostgreSQL", "MongoDB", "Prisma", "Docker", "Firebase"
+      ]
+    }
+    </script>
 </head>
 <body class="bg-gray-900 text-white font-inter">
+    <a href="#home" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:text-gray-900 focus:px-4 focus:py-3 focus:rounded-lg">
+        Pular para o conteúdo
+    </a>
     <nav aria-label="Navegação principal" class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <h1 class="text-2xl font-bold gradient-text">MLDev</h1>
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex space-x-6">
                     <a href="#home" class="text-gray-300 hover:text-purple-400 transition font-medium">Home</a>
                     <a href="#about" class="text-gray-300 hover:text-purple-400 transition font-medium">Sobre</a>
+                    <a href="#experience" class="text-gray-300 hover:text-purple-400 transition font-medium">Experiência</a>
                     <a href="#skills" class="text-gray-300 hover:text-purple-400 transition font-medium">Tecnologias</a>
                     <a href="#projects" class="text-gray-300 hover:text-purple-400 transition font-medium">Projetos</a>
+                    <a href="./Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" download class="text-purple-300 hover:text-purple-200 transition font-semibold">Currículo</a>
                     <a href="#contact" class="text-gray-300 hover:text-purple-400 transition font-medium">Contato</a>
                 </div>
                 <button id="menu-btn" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-gray-300 hover:text-purple-400 transition">
@@ -68,8 +89,10 @@
             <div class="px-4 py-4 space-y-3">
                 <a href="#home" class="block text-gray-300 hover:text-purple-400 transition py-2">Home</a>
                 <a href="#about" class="block text-gray-300 hover:text-purple-400 transition py-2">Sobre</a>
+                <a href="#experience" class="block text-gray-300 hover:text-purple-400 transition py-2">Experiência</a>
                 <a href="#skills" class="block text-gray-300 hover:text-purple-400 transition py-2">Tecnologias</a>
                 <a href="#projects" class="block text-gray-300 hover:text-purple-400 transition py-2">Projetos</a>
+                <a href="./Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" download class="block text-purple-300 hover:text-purple-200 transition py-2 font-semibold">Baixar currículo</a>
                 <a href="#contact" class="block text-gray-300 hover:text-purple-400 transition py-2">Contato</a>
             </div>
         </div>
@@ -85,13 +108,13 @@
                 <div>
                     <div class="flex items-center mb-4">
                         <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                        <span class="text-green-400 font-medium">Disponível para oportunidades</span>
+                        <span class="text-green-400 font-medium">Disponível para oportunidades em Desenvolvimento Web e Backend</span>
                     </div>
                     <h1 class="text-4xl md:text-6xl font-bold mb-4">
                         <span class="text-white">Olá, eu sou</span><br>
                         <span class="gradient-text">Maria Luiza de Souza</span>
                     </h1>
-                    <h2 class="text-2xl md:text-3xl text-gray-300 mb-6">Desenvolvedora Backend</h2>
+                    <h2 class="text-2xl md:text-3xl text-gray-300 mb-6">Desenvolvedora Web & Backend</h2>
                     <p class="text-lg text-gray-400 mb-8 leading-relaxed">
                         Desenvolvo APIs e aplicações web com <span class="text-purple-400 font-semibold">Node.js</span>,
                         <span class="text-purple-400 font-semibold">TypeScript</span>, <span class="text-purple-400 font-semibold">NestJS</span>,
@@ -173,7 +196,11 @@
                             </div>
                             <div class="timeline-item">
                                 <h4 class="text-white font-semibold">Técnica de Informática</h4>
-                                <p class="text-gray-400 text-sm">Concluído</p>
+                                <p class="text-gray-400 text-sm">IFRN • Concluído</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="text-white font-semibold">Google Cloud Computing Foundations</h4>
+                                <p class="text-gray-400 text-sm">Google • Certificação</p>
                             </div>
                         </div>
                     </div>
@@ -219,6 +246,58 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12">
+                <div>
+                    <h2 class="section-title text-4xl font-bold mb-4 gradient-text">Experiência em Tecnologia</h2>
+                    <p class="text-gray-400 max-w-3xl">
+                        Experiência profissional com suporte de TI e participação em desenvolvimento, testes e manutenção de aplicações web.
+                    </p>
+                </div>
+                <a href="./Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" download class="text-purple-300 hover:text-purple-200 font-semibold inline-flex items-center">
+                    <i class="fas fa-file-arrow-down mr-2"></i> Currículo completo
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <article class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-purple-500/20">
+                    <div class="flex items-start justify-between gap-4 mb-5">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-purple-400 font-bold">Experiência com desenvolvimento web</span>
+                            <h3 class="text-xl font-bold text-white mt-2">Instituto Federal do Rio Grande do Norte — Reitoria</h3>
+                            <p class="text-gray-400 mt-1">Estágio em TI</p>
+                        </div>
+                        <span class="text-xs text-gray-400 whitespace-nowrap">Mar/2022 — Jun/2023</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-300 text-sm leading-relaxed">
+                        <li class="flex items-start"><i class="fas fa-code text-purple-400 mt-1 mr-3"></i><span>Apoio ao desenvolvimento, testes e manutenção de aplicações web com HTML, CSS, JavaScript e PHP.</span></li>
+                        <li class="flex items-start"><i class="fas fa-headset text-blue-400 mt-1 mr-3"></i><span>Suporte técnico, manutenção de equipamentos, atendimento a usuários e controle de chamados.</span></li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="tech-chip">HTML</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">PHP</span><span class="tech-chip">Testes</span>
+                    </div>
+                </article>
+
+                <article class="card-hover bg-gray-800/50 p-7 rounded-2xl border border-gray-700">
+                    <div class="flex items-start justify-between gap-4 mb-5">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-blue-400 font-bold">Infraestrutura e suporte</span>
+                            <h3 class="text-xl font-bold text-white mt-2">Grau Educacional</h3>
+                            <p class="text-gray-400 mt-1">Técnica em Informática</p>
+                        </div>
+                        <span class="text-xs text-gray-400 whitespace-nowrap">Jul/2023 — Mai/2026</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-300 text-sm leading-relaxed">
+                        <li class="flex items-start"><i class="fas fa-screwdriver-wrench text-blue-400 mt-1 mr-3"></i><span>Triagem, diagnóstico e resolução de incidentes em computadores, notebooks, softwares e redes.</span></li>
+                        <li class="flex items-start"><i class="fas fa-network-wired text-green-400 mt-1 mr-3"></i><span>Configuração de infraestrutura de rede, equipamentos e preparação de laboratórios.</span></li>
+                        <li class="flex items-start"><i class="fas fa-users text-yellow-400 mt-1 mr-3"></i><span>Atendimento a usuários e acompanhamento de demandas técnicas.</span></li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -276,6 +355,7 @@
                         <span class="tech-chip">Prisma</span>
                         <span class="tech-chip">Mongoose</span>
                         <span class="tech-chip">MySQL</span>
+                        <span class="tech-chip">Firebase / Firestore</span>
                     </div>
                 </div>
 
@@ -318,9 +398,12 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-400 mb-5 leading-relaxed">
+                    <p class="text-gray-400 mb-4 leading-relaxed">
                         Aplicação de gerenciamento de tarefas com API REST, autenticação JWT, persistência em MongoDB e frontend responsivo.
                     </p>
+                    <div class="mb-5 px-4 py-3 rounded-xl bg-purple-500/10 border border-purple-500/20 text-sm text-purple-100">
+                        <strong class="text-white">Minha atuação:</strong> API, autenticação, modelagem de dados, filtros e interface responsiva.
+                    </div>
 
                     <div class="mb-5">
                         <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Desafios técnicos</p>
@@ -359,9 +442,12 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-400 mb-5 leading-relaxed">
+                    <p class="text-gray-400 mb-4 leading-relaxed">
                         ERP multi-tenant com frontend em Next.js, API NestJS e PostgreSQL, estruturado para evoluir em módulos empresariais.
                     </p>
+                    <div class="mb-5 px-4 py-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-sm text-blue-100">
+                        <strong class="text-white">Minha atuação:</strong> arquitetura, autenticação, sessões, modelagem multiempresa e dashboard.
+                    </div>
 
                     <div class="mb-5">
                         <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Decisões de engenharia</p>
@@ -395,27 +481,34 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-400 mb-5 leading-relaxed">
-                        Aplicação web de organização de tarefas e anotações com dashboard, Kanban, filtros e experiência otimizada para celular.
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Aplicação web de organização de tarefas e anotações com dashboard, Kanban, filtros, login Google e sincronização em nuvem.
                     </p>
+                    <div class="mb-5 px-4 py-3 rounded-xl bg-pink-500/10 border border-pink-500/20 text-sm text-pink-100">
+                        <strong class="text-white">Minha atuação:</strong> interface, experiência mobile, Kanban, dashboard, autenticação e persistência com Firebase.
+                    </div>
 
                     <div class="mb-5">
                         <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Destaques</p>
                         <ul class="space-y-2 text-sm text-gray-300">
                             <li>• Kanban com drag and drop</li>
                             <li>• Dashboard e indicadores visuais</li>
-                            <li>• Filtros por status e período</li>
+                            <li>• Login com Google via Firebase Authentication</li>
+                            <li>• Sincronização de dados com Cloud Firestore</li>
                             <li>• Layout responsivo e foco em usabilidade</li>
                         </ul>
                     </div>
 
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="tech-chip">HTML</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">Chart.js</span>
+                        <span class="tech-chip">HTML</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">Chart.js</span><span class="tech-chip">Firebase</span><span class="tech-chip">Firestore</span>
                     </div>
 
                     <div class="flex flex-wrap gap-3 mt-auto">
                         <a href="https://github.com/maria-luiza-souza/aplicativo_tarefas_lala" target="_blank" rel="noopener noreferrer" class="px-5 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition font-medium inline-flex items-center">
                             <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                        <a href="https://maria-luiza-souza.github.io/aplicativo_tarefas_lala/" target="_blank" rel="noopener noreferrer" class="px-5 py-3 border border-pink-500 text-pink-300 rounded-xl hover:bg-pink-600 hover:text-white transition font-medium inline-flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Ver online
                         </a>
                     </div>
                 </article>
@@ -426,7 +519,7 @@
     <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-white border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold mb-4 text-center">Contato</h2>
-            <p class="text-purple-100/80 text-center max-w-2xl mx-auto mb-12">Aberta a oportunidades, projetos e conversas sobre desenvolvimento backend e aplicações web.</p>
+            <p class="text-purple-100/80 text-center max-w-2xl mx-auto mb-12">Aberta a oportunidades em desenvolvimento web e backend, incluindo estágio, projetos e trabalho remoto.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <a href="mailto:malusouza396@gmail.com" class="card-hover bg-white bg-opacity-10 p-8 rounded-2xl text-center hover:bg-opacity-20">
                     <i class="fas fa-envelope text-5xl mb-4"></i>
