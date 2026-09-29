@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículo de Maria Luiza de Souza — Desenvolvedora Web & Backend.">
+  <meta name="theme-color" content="#111827">
+  <title>Currículo | Maria Luiza de Souza</title>
+  <style>
+    :root{
+      --bg:#f3f4f6;--paper:#fff;--text:#18212b;--muted:#5f6b76;--line:#d7dde3;
+      --primary:#4057a9;--soft:#eef1ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+    .toolbar{position:sticky;top:0;z-index:10;background:rgba(17,24,39,.97);color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.1)}
+    .toolbar strong{font-size:14px}
+    .actions{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{border:0;border-radius:10px;padding:10px 14px;font-weight:700;text-decoration:none;cursor:pointer;font-size:13px}
+    .btn-primary{background:#fff;color:#111827}
+    .btn-secondary{background:#2b3443;color:#fff;border:1px solid #4b5563}
+    .page{width:min(900px,calc(100% - 28px));margin:26px auto;background:var(--paper);box-shadow:0 18px 50px rgba(15,23,42,.12);padding:48px 54px}
+    h1{font-size:30px;margin:0 0 5px;letter-spacing:-.03em}
+    .headline{font-weight:700;color:var(--primary);font-size:14px;margin-bottom:10px}
+    .contact{font-size:12px;color:var(--muted);line-height:1.7;border-bottom:2px solid var(--primary);padding-bottom:12px}
+    .contact a{color:var(--primary);text-decoration:none}
+    h2{font-size:13px;letter-spacing:.06em;margin:22px 0 8px;color:var(--primary);text-transform:uppercase}
+    p,li{font-size:12px;line-height:1.55;margin-top:0}
+    ul{margin:6px 0 0;padding-left:18px}
+    .skills{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}
+    .skill{font-size:12px;line-height:1.5}
+    .row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-top:11px}
+    .row strong{font-size:12.5px}
+    .date{font-size:11px;color:var(--muted);white-space:nowrap}
+    .muted{color:var(--muted)}
+    .footer-note{text-align:center;color:#7b8490;font-size:10px;margin-top:24px;padding-top:12px;border-top:1px solid var(--line)}
+    @media(max-width:700px){
+      .page{width:100%;margin:0;padding:26px 20px;box-shadow:none}
+      .skills{grid-template-columns:1fr}
+      .row{display:block}.date{display:block;margin-top:3px}
+      .toolbar{position:relative}
+    }
+    @media print{
+      body{background:#fff}.toolbar{display:none}.page{width:auto;margin:0;box-shadow:none;padding:20mm 16mm}
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <strong>Currículo — Maria Luiza de Souza</strong>
+    <div class="actions">
+      <a class="btn btn-secondary" href="./index.html">Voltar ao portfólio</a>
+      <button class="btn btn-primary" id="downloadCv" type="button">Baixar PDF</button>
+    </div>
+  </div>
+
+  <main class="page">
+    <header>
+      <h1>Maria Luiza de Souza</h1>
+      <div class="headline">DESENVOLVEDORA WEB | BACKEND | NODE.JS | TYPESCRIPT</div>
+      <div class="contact">
+        Mossoró - RN · (84) 98852-8832 ·
+        <a href="mailto:malusouza396@gmail.com">malusouza396@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/malu-souza-a27564224/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+        <a href="https://github.com/maria-luiza-souza" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+        <a href="./index.html">Portfólio</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Objetivo</h2>
+      <p><strong>Desenvolvedora Web — Cread / IFMG</strong></p>
+    </section>
+
+    <section>
+      <h2>Perfil profissional</h2>
+      <p>Profissional de Tecnologia da Informação, formada em Desenvolvimento Back-End e Técnica em Informática, com experiência prática no apoio ao desenvolvimento e manutenção de aplicações web no IFRN e em projetos próprios. Atua com interfaces responsivas, APIs REST, autenticação, bancos de dados e organização de sistemas. Busca contribuir no Cread/IFMG com desenvolvimento de funcionalidades, evolução de plataformas, segurança e experiência do usuário.</p>
+    </section>
+
+    <section>
+      <h2>Competências técnicas</h2>
+      <div class="skills">
+        <div class="skill"><strong>Backend:</strong> Node.js, TypeScript, NestJS, Express, APIs REST, JWT e PHP.</div>
+        <div class="skill"><strong>Frontend:</strong> HTML, CSS, JavaScript, React, Next.js e design responsivo.</div>
+        <div class="skill"><strong>Dados:</strong> PostgreSQL, MongoDB, MySQL, Prisma, Mongoose e SQL.</div>
+        <div class="skill"><strong>Ferramentas:</strong> Git, GitHub, Docker, Postman, VS Code e N8N.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projetos</h2>
+      <div class="row"><strong>ERP SaaS Multiempresa — Projeto em desenvolvimento</strong><span class="date">2026</span></div>
+      <ul><li>Next.js, NestJS, TypeScript, PostgreSQL, Prisma e Docker; arquitetura multiempresa, autenticação JWT, refresh token com rotação, cookie HttpOnly, sessões persistentes e dashboard protegido.</li></ul>
+
+      <div class="row"><strong>LeadFlow CRM — CRM web publicado</strong><span class="date">2026</span></div>
+      <ul><li>Node.js, Express, MongoDB e Mongoose; autenticação JWT, gestão de leads e clientes, pipeline Kanban, conversão de leads, interações, follow-ups, filtros e dashboard comercial.</li></ul>
+
+      <div class="row"><strong>ULALÁ — Aplicação de tarefas e anotações</strong><span class="date">2026</span></div>
+      <ul><li>Aplicação web responsiva com dashboard, Kanban drag and drop, filtros, anotações e indicadores visuais, desenvolvida com HTML, CSS e JavaScript.</li></ul>
+    </section>
+
+    <section>
+      <h2>Experiência profissional</h2>
+      <div class="row"><strong>Instituto Federal do Rio Grande do Norte — Reitoria · Estágio em TI</strong><span class="date">Mar/2022 — Jun/2023</span></div>
+      <ul>
+        <li>Apoio ao desenvolvimento, testes e manutenção de aplicações web com HTML, CSS, JavaScript e PHP.</li>
+        <li>Suporte técnico, manutenção de equipamentos, atendimento a usuários e controle de chamados em equipe de TI.</li>
+      </ul>
+
+      <div class="row"><strong>Aecalaga Cursos Técnicos LTDA (Grau Educacional) · Técnica em Informática</strong><span class="date">Jul/2023 — Mai/2026</span></div>
+      <ul><li>Suporte a usuários e professores, diagnóstico de incidentes, configuração de softwares/equipamentos e redes, além da preparação de laboratórios.</li></ul>
+
+      <div class="row"><strong>AeC Centro de Contatos · Atendente</strong><span class="date">Mai/2015 — Set/2021</span></div>
+      <ul><li>Atendimento multicanal e resolução de problemas em ambiente de alto volume, desenvolvendo comunicação, organização e trabalho sob pressão.</li></ul>
+    </section>
+
+    <section>
+      <h2>Formação e certificação</h2>
+      <p><strong>Tecnólogo em Desenvolvimento Back-End</strong> — Anhanguera · Concluído em dez/2025<br>
+      <strong>Técnico em Informática</strong> — IFRN Mossoró · Concluído em jul/2023<br>
+      <strong>Google Cloud Computing Foundations</strong> — Google · Certificação</p>
+    </section>
+
+    <div class="footer-note">Currículo direcionado à vaga de Desenvolvedora Web — Cread / IFMG</div>
+  </main>
+
+  <script>
+    const cvUrl = 'https://raw.githubusercontent.com/maria-luiza-souza/Portf-lio-Profissional/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf';
+    document.getElementById('downloadCv').addEventListener('click', async () => {
+      try {
+        const response = await fetch(cvUrl, { cache: 'no-store' });
+        if (!response.ok) throw new Error('Falha ao carregar o currículo');
+        const blob = await response.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = objectUrl;
+        link.download = 'Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+      } catch (error) {
+        window.open(cvUrl, '_blank', 'noopener,noreferrer');
+      }
+    });
+  </script>
+</body>
+</html>
