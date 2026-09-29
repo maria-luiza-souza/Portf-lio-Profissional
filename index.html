@@ -77,7 +77,7 @@
                     <a href="#experience" class="text-gray-300 hover:text-purple-400 transition font-medium">Experiência</a>
                     <a href="#skills" class="text-gray-300 hover:text-purple-400 transition font-medium">Tecnologias</a>
                     <a href="#projects" class="text-gray-300 hover:text-purple-400 transition font-medium">Projetos</a>
-                    <a href="https://github.com/maria-luiza-souza/Portf-lio-Profissional/blob/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-200 transition font-semibold">Currículo</a>
+                    <a href="#" onclick="baixarCurriculo(event)" class="text-purple-300 hover:text-purple-200 transition font-semibold">Currículo</a>
                     <a href="#contact" class="text-gray-300 hover:text-purple-400 transition font-medium">Contato</a>
                 </div>
                 <button id="menu-btn" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-gray-300 hover:text-purple-400 transition">
@@ -92,7 +92,7 @@
                 <a href="#experience" class="block text-gray-300 hover:text-purple-400 transition py-2">Experiência</a>
                 <a href="#skills" class="block text-gray-300 hover:text-purple-400 transition py-2">Tecnologias</a>
                 <a href="#projects" class="block text-gray-300 hover:text-purple-400 transition py-2">Projetos</a>
-                <a href="https://github.com/maria-luiza-souza/Portf-lio-Profissional/blob/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" target="_blank" rel="noopener noreferrer" class="block text-purple-300 hover:text-purple-200 transition py-2 font-semibold">Ver currículo</a>
+                <a href="#" onclick="baixarCurriculo(event)" class="block text-purple-300 hover:text-purple-200 transition py-2 font-semibold">Baixar currículo</a>
                 <a href="#contact" class="block text-gray-300 hover:text-purple-400 transition py-2">Contato</a>
             </div>
         </div>
@@ -125,8 +125,8 @@
                         <a href="#projects" class="btn-primary px-8 py-4 rounded-xl font-semibold text-white inline-flex items-center">
                             <i class="fas fa-rocket mr-2"></i> Ver Projetos
                         </a>
-                        <a href="https://github.com/maria-luiza-souza/Portf-lio-Profissional/blob/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl font-semibold text-white bg-pink-600 hover:bg-pink-700 transition inline-flex items-center">
-                            <i class="fas fa-file-lines mr-2"></i> Ver currículo
+                        <a href="#" onclick="baixarCurriculo(event)" class="px-8 py-4 rounded-xl font-semibold text-white bg-pink-600 hover:bg-pink-700 transition inline-flex items-center">
+                            <i class="fas fa-file-arrow-down mr-2"></i> Baixar currículo
                         </a>
                         <a href="https://github.com/maria-luiza-souza" target="_blank" rel="noopener noreferrer" class="btn-outline px-8 py-4 rounded-xl font-semibold text-purple-400 inline-flex items-center">
                             <i class="fab fa-github mr-2"></i> GitHub
@@ -263,7 +263,7 @@
                         Experiência profissional com suporte de TI e participação em desenvolvimento, testes e manutenção de aplicações web.
                     </p>
                 </div>
-                <a href="https://raw.githubusercontent.com/maria-luiza-souza/Portf-lio-Profissional/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-200 font-semibold inline-flex items-center">
+                <a href="#" onclick="baixarCurriculo(event)" class="text-purple-300 hover:text-purple-200 font-semibold inline-flex items-center">
                     <i class="fas fa-file-arrow-down mr-2"></i> Baixar currículo em PDF
                 </a>
             </div>
@@ -545,11 +545,11 @@
                 </a>
             </div>
             <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="https://github.com/maria-luiza-souza/Portf-lio-Profissional/blob/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl font-semibold bg-white text-gray-900 hover:bg-gray-100 transition inline-flex items-center justify-center">
-                    <i class="fas fa-file-lines mr-2"></i> Ver currículo
+                <a href="#" onclick="baixarCurriculo(event)" class="px-6 py-3 rounded-xl font-semibold bg-white text-gray-900 hover:bg-gray-100 transition inline-flex items-center justify-center">
+                    <i class="fas fa-file-arrow-down mr-2"></i> Baixar currículo
                 </a>
-                <a href="https://raw.githubusercontent.com/maria-luiza-souza/Portf-lio-Profissional/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl font-semibold border border-purple-300 text-purple-100 hover:bg-white/10 transition inline-flex items-center justify-center">
-                    <i class="fas fa-file-arrow-down mr-2"></i> Baixar PDF
+                <a href="https://github.com/maria-luiza-souza/Portf-lio-Profissional/blob/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl font-semibold border border-purple-300 text-purple-100 hover:bg-white/10 transition inline-flex items-center justify-center">
+                    <i class="fas fa-file-lines mr-2"></i> Visualizar
                 </a>
             </div>
         </div>
@@ -575,6 +575,26 @@
     </footer>
 
     <script>
+        async function baixarCurriculo(event) {
+            if (event) event.preventDefault();
+            const url = 'https://raw.githubusercontent.com/maria-luiza-souza/Portf-lio-Profissional/main/Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf';
+            try {
+                const response = await fetch(url, { cache: 'no-store' });
+                if (!response.ok) throw new Error('Falha ao carregar o currículo');
+                const blob = await response.blob();
+                const objectUrl = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = objectUrl;
+                link.download = 'Curriculo_Maria_Luiza_Desenvolvedora_Web.pdf';
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+                setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+            } catch (error) {
+                window.open(url, '_blank', 'noopener,noreferrer');
+            }
+        }
+
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (menuBtn) {
